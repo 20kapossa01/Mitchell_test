@@ -36,4 +36,7 @@ def destroy
     end
   end
 end
+def update
+  
+end
 end
