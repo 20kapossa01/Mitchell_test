@@ -1,7 +1,6 @@
-10.times do |blog|
-  Blog.create!(
-    title: "My Rails #{blog}",
-    body: "no."
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}",
   )
 end
 
@@ -16,9 +15,9 @@ end
 
 puts "5 skills created."
 
-3.times do |topic|
-  Topic.create!(
-    title: "Topic #{topic}",
+10.times do |blog|
+  Blog.create!(
+    title: "Blog #{blog}",
     body: "yepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyepyep",
     topic_id: Topic.last.id
   )
@@ -49,3 +48,11 @@ puts "9 portfolio items created."
 end
 
 puts "9 portfolio items created."
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+  name: 'Technology #{technology}'
+  )
+end
+
+puts '3 technologies created'
